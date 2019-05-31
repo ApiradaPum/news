@@ -1,0 +1,30 @@
+.bg-dark-mint {
+  background-color: #009588;
+}
+.bg-mint {
+  background-color: #27A69B;
+}
+.nav-bar {
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.body-background {
+  padding: 16px;
+  background-color: white;
+  height: 100%;
+}
+.blog-news {
+  background-color: white;
+  padding: 10px 20px 10px 15px;
+}
+.blog-news .img-resposive {
+  width: 100%;
+  padding: 0px 20px 0px 10px;
+  height: 160px;
+}
+.blog-news .content {
+  height: 200px;
+  width: 100%;
+  padding-bottom: 10px;
+}
