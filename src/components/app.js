@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
 
-import Chat from "../containers/Chat";
+import News from "../containers/News";
 import Header from "../containers/Header";
 
 export default class App extends Component {
@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div className="body-background">
         <Header />
-        <Chat />
+        <News />
       </div>
     );
   }
