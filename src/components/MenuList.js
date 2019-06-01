@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-import {data} from '../json/menu.json';
 import Menu from './Menu.js';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+import { fetchMenu } from '../actions';
 
 class MenuList extends Component {
-	constructor(props) {
-		super(props)
-			this.state = {
-            menu: data
-			}
-		}
-		
-    
+	componentDidMount() {
+		this.props.fetchMenu();
+	}
+	
 	renderMenu = () =>{
-		return this.state.menu.map((item, key) => (
-			<Menu data={item} key={key}/>
-		));
+		return _.map(this.props.menu, (item, key) => {
+		  return (
+				<Menu data={item} key={key}/>
+		  );
+		});
 	}
     
 	render() {
@@ -24,10 +24,15 @@ class MenuList extends Component {
 							{this.renderMenu()}
 					</ul>
 				</div>
-				
 			)
 		}
-	}
+}
+
+function mapStateToProps(state){
+	return {
+		menu: state.menu
+	};
+}
   
   
-  export default MenuList
+export default connect(mapStateToProps,{fetchMenu})(MenuList);
