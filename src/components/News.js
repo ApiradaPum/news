@@ -11,7 +11,7 @@ class News extends Component {
 
 	render() {
         return (
-            <div className="col-sm-4 col-xs-12">
+            <div className="col-12 col-sm-4">
                 <div className="blog-news">
                     <h3>Title</h3>
                     <img className="img-responsive" src={this.state.data.img} />
