@@ -41,11 +41,18 @@ p{
     padding-left: 20px;
 }
 
-@media (max-width: 575px){
+@media (min-width: 200px){
     .col-12{
         width: 100%;
         flex: 0 0 100%; 
         max-width: 100%; 
+    }
+}
+
+@media (min-width: 576px){
+    .col-sm-4{
+        flex: 0 0 33.333333%;
+        max-width: 33.3333333%; 
     }
 }
 
