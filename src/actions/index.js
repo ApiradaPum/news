@@ -1,8 +1,6 @@
 export const FETCH_NEWS = "fetch_news";
-export const GET_NEWS = "get_news";
 export const FETCH_MENU = "fetch_menu";
 export const SEARCH_NEWS = "search_news";
-//import news from '../reducers/reducer_news.js';
 
 export function fetchNews(){
     return {
@@ -11,17 +9,10 @@ export function fetchNews(){
     };
 }
 
-export function getNews(news){
-    return {
-        type: GET_NEWS,
-        payload: news
-    };
-}
-
-export function searchNews(word){
+export function searchNews(term){
     return {
         type: SEARCH_NEWS,
-        payload: word
+        payload: term
     };
 }
 

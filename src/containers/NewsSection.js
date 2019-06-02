@@ -4,7 +4,7 @@ import _ from 'lodash';
 import News from '../components/News.js';
 import '../style/news.scss';
 import { bindActionCreators } from 'redux';
-import { getNews, fetchNews } from '../actions';
+import { fetchNews } from '../actions';
 
 
 class NewsSection extends Component {
@@ -22,13 +22,17 @@ class NewsSection extends Component {
 	
   
 	render() {
+		let showLoad = 'btn-loadmore';
+		if(this.props.news.length >= this.props.allNews.length){
+			showLoad = 'btn-loadmore hidden';
+		}
 		return (
 			<div className="container">
 				<div className="row">
 					{this.renderNews()}
-					<button className="btn-loadmore" 
-					onClick={() => this.props.getNews(this.props.news)} > 
-					Load More 
+					<button className={showLoad} 
+					onClick={() => this.props.fetchNews()} > 
+						Load More 
 					</button>
 				</div>
 			</div>       
@@ -38,12 +42,13 @@ class NewsSection extends Component {
 
 function mapStateToProps(state){
 	return {
-		news: state.news
+		news: state.news.display_news,
+		allNews: state.news.all_news
 	};
 }
 
 function mapDispatchToProps(dispatch){
-	return bindActionCreators({ getNews: getNews, fetchNews }, dispatch);
+	return bindActionCreators({ fetchNews }, dispatch);
 }
   
 

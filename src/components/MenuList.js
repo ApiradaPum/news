@@ -19,7 +19,7 @@ class MenuList extends Component {
     
 	render() {
 		return (
-				<div >
+				<div className="group-nav">
 					<ul className="navbar-nav mr-auto">
 							{this.renderMenu()}
 					</ul>
