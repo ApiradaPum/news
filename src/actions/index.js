@@ -4,8 +4,7 @@ export const SEARCH_NEWS = "search_news";
 
 export function fetchNews(){
     return {
-        type: FETCH_NEWS,
-        payload: {}
+        type: FETCH_NEWS
     };
 }
 
@@ -18,7 +17,6 @@ export function searchNews(term){
 
 export function fetchMenu(){
     return {
-        type: FETCH_MENU,
-        payload: {}
+        type: FETCH_MENU
     };
 }

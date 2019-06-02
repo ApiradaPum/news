@@ -1,25 +1,22 @@
-{
-    "data": [ 
-        {
-            "id": 1,
-            "title": "News",
-            "url": "#"
-        },
-        {
-            "id": 2,
-            "title": "Regions",
-            "url": "#"
-        },
-        {
-            "id": 3,
-            "title": "Video",
-            "url": "#"
-        },
-        {
-            "id": 4,
-            "title": "TV",
-            "url": "#"
-        }
-
-    ]
-}
+[ 
+    {
+        "id": 1,
+        "title": "News",
+        "url": "#"
+    },
+    {
+        "id": 2,
+        "title": "Regions",
+        "url": "#"
+    },
+    {
+        "id": 3,
+        "title": "Video",
+        "url": "#"
+    },
+    {
+        "id": 4,
+        "title": "TV",
+        "url": "#"
+    }
+]

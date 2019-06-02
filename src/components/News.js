@@ -9,7 +9,7 @@ class News extends Component {
 	render() {
         return (
             <div className="col-12 col-md-4 col-news">
-                <div className="blog-news">
+                <div className="block-news">
                     <h3 className="d-none d-sm-block">{this.props.data.title}</h3>
                     <img className="img-responsive" src={this.getMockImg()} alt="" />
                     <div className="newsMobile">

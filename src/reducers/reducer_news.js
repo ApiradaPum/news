@@ -13,6 +13,7 @@ export default function(state = init_state, action){
 			};
 		case SEARCH_NEWS:
 			const searchedNews =  _.values(_.pickBy(news100, (value,key) => { return find_matched_term(value,key,action)}));
+			
 			return { all_news: searchedNews, display_news: _.slice(searchedNews, 0, 15)};
 		default:
 			return state;

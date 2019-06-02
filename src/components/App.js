@@ -3,17 +3,17 @@ import { Component } from "react";
 
 import '../style/main.scss';
 
-import Header from "../containers/Header";
-import NewsSection from "../containers/NewsSection";
-import Footer from "../containers/Footer";
+import HeaderSection from "./HeaderSection";
+import NewsSection from "./NewsSection";
+import FooterSection from "./FooterSection";
 
 export default class App extends Component {
   render() {
     return (
-      <div className="body-background">
-        <Header />
+      <div className="app body-background">
+        <HeaderSection />
         <NewsSection />
-        <Footer />
+        <FooterSection />
       </div>
     );
   }

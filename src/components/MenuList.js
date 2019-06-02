@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import Menu from './Menu.js';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { fetchMenu } from '../actions';
 
-class MenuList extends Component {
+export class MenuList extends Component {
 	componentDidMount() {
 		this.props.fetchMenu();
 	}
@@ -12,7 +11,9 @@ class MenuList extends Component {
 	renderMenu = () =>{
 		return _.map(this.props.menu, (item, key) => {
 		  return (
-				<Menu data={item} key={key}/>
+				<li className="nav-item" key={key}>
+					<a className="nav-link" href={item.url}>{item.title}</a>
+				</li>
 		  );
 		});
 	}
@@ -21,7 +22,7 @@ class MenuList extends Component {
 		return (
 				<div className="group-nav">
 					<ul className="navbar-nav mr-auto">
-							{this.renderMenu()}
+						{this.renderMenu()}
 					</ul>
 				</div>
 			)

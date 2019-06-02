@@ -4,7 +4,7 @@ import menu from '../json/menu';
 export default function(state = {}, action){
 	switch(action.type){
 		case FETCH_MENU:
-			return menu.data;
+			return menu;
 		default:
 			return state;
 	}

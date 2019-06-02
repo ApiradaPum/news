@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import News from '../components/News.js';
+import News from './News.js';
 import '../style/news.scss';
 import { bindActionCreators } from 'redux';
 import { fetchNews } from '../actions';
 
 
-class NewsSection extends Component {
+export class NewsSection extends Component {
 	componentDidMount() {
 		this.props.fetchNews();
 	}
