@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import _ from 'lodash';
 
 class News extends Component {
     constructor(props) {
@@ -9,15 +10,21 @@ class News extends Component {
         };
     }
 
+    getMockImg(){
+        return `${this.state.data.img}?random=${_.random(1,100)}`;
+    }
+
 	render() {
         return (
-            <div className="col-12 col-sm-4">
+            <div className="col-12 col-md-4 col-news">
                 <div className="blog-news">
-                    <h3 className="d-none d-sm-block">Title</h3>
-                    <img className="img-responsive" src={this.state.data.img} />
-                    <h4 className="d-block d-sm-none">Title</h4>
-                    <p>{this.state.data.content}</p>
-                    <span className="update-date">Updated: {this.state.data.updated_at}</span>
+                    <h3 className="d-none d-sm-block">{this.state.data.title}</h3>
+                    <img className="img-responsive" src={this.getMockImg()} />
+                    <div className="newsMobile">
+                        <h5 className="d-block d-sm-none title">{this.state.data.title}</h5>
+                        <p>{this.state.data.content}</p>
+                        <span className="update-date">Updated: {this.state.data.updated_at}</span>
+                    </div>                    
                 </div>
             </div>   
         )

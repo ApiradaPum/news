@@ -22,7 +22,7 @@
 
 .body-background{
     padding-top:  45px;
-    background-color: rgb(192, 187, 187);
+    background-color: $dark-white-smoke;
     height: 100%;
 }
 
@@ -33,30 +33,6 @@ h3{
 p{
     margin-bottom: 10px;
 }
-
-
-.col-sm-4, .col-12{
-    margin-top: 45px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-@media (min-width: 200px){
-    .col-12{
-        width: 100%;
-        flex: 0 0 100%; 
-        max-width: 100%; 
-    }
-}
-
-@media (min-width: 576px){
-    .col-sm-4{
-        flex: 0 0 33.333333%;
-        max-width: 33.3333333%; 
-    }
-}
-
-
 
 .btn-loadmore{
     background-color: white;

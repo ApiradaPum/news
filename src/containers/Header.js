@@ -23,9 +23,13 @@ class Header extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="container nav-header">
 				<div className="nav-bar">
-					<img className="logo" src="/img/empty.png" />
+					<div className="header-bar">
+						<img className="logo" src="/img/empty.png" />
+						<h4 className="title-mobile"> News </h4>
+						<i className="fa fa-bars" />
+					</div>
 					<div className="menuList">
 						<MenuList />
 						<form onSubmit={()=>(this.onSubmit.bind(this))}>

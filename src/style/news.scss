@@ -1,3 +1,10 @@
+.col-news{
+    margin-top: 45px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
 .blog-news{
     background-color: white;
     padding: 20px 10px 15px 10px;
@@ -6,10 +13,11 @@
         padding: 20px 0px 10px 0px;
         height: 160px;
     } 
-    .content{
+    p{
         height: 200px;
         width: 100%;
         padding-bottom: 10px; 
+        overflow: hidden;
     }
     .update-date{
         color: gray;
@@ -17,21 +25,43 @@
 }
 
 @media (max-width: 767px) {
+    .col-news {
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 0;
+        border-bottom: 1px solid gray;
+    }
     .blog-news{
-        background-color: white;
-        padding: 20px 10px 15px 10px;
+        display: flex;
+        padding: 8px 10px 10px 10px;
         .img-responsive{
-            width: 100%;
-            padding: 20px 0px 10px 0px;
-            height: 160px;
+            width: 40%;
+            padding: 0 10px 0 0;
+            height: 100%;
         } 
-        .content{
-            height: 200px;
+        .title{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px
+        }
+
+        p{
             width: 100%;
-            padding-bottom: 10px; 
+            padding-bottom: 0; 
+            font-size: 14px;
+            height: 100px;
+            overflow: hidden;
         }
         .update-date{
             color: gray;
+            margin-bottom: 10px;
+            font-size: 12px;
         }
+    }
+    .btn-loadmore{
+        margin: 10px 5px;
+    }
+    .footer{
+        display: none !important;
     }
 }
