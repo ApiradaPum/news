@@ -12,13 +12,14 @@ class SearchBar extends Component {
         this.hunndleSearchClick = this.hunndleSearchClick.bind(this);
     }
     
-    handleSubmitForm(event){
-        event.preventDefault();
+    handleSubmitForm(e){
+        if(e)
+            e.preventDefault();
         this.props.onSubmit(this.state.term);
     }
 
-    handleTermChange(event) {
-        this.setState({term: event.target.value});
+    handleTermChange(e) {
+        this.setState({term: e.target.value});
     }
 
     hunndleSearchClick(){
